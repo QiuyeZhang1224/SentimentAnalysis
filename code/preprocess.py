@@ -19,20 +19,20 @@ def is_valid_word(word):
     return re.search(r'^[a-zA-Z][a-z0-9A-Z\._]*$', word) is not None
 
 
-def handle_emojis(tweet):
+# def handle_emojis(tweet):
     # Smile -- :), : ), :-), (:, ( :, (-:, :')
-    tweet = re.sub(r'(:\s?\)|:-\)|\(\s?:|\(-:|:\'\))', ' EMO_POS ', tweet)
+    # tweet = re.sub(r'(:\s?\)|:-\)|\(\s?:|\(-:|:\'\))', ' EMO_POS ', tweet)
     # Laugh -- :D, : D, :-D, xD, x-D, XD, X-D
-    tweet = re.sub(r'(:\s?D|:-D|x-?D|X-?D)', ' EMO_POS ', tweet)
+    # tweet = re.sub(r'(:\s?D|:-D|x-?D|X-?D)', ' EMO_POS ', tweet)
     # Love -- <3, :*
-    tweet = re.sub(r'(<3|:\*)', ' EMO_POS ', tweet)
+    # tweet = re.sub(r'(<3|:\*)', ' EMO_POS ', tweet)
     # Wink -- ;-), ;), ;-D, ;D, (;,  (-;
-    tweet = re.sub(r'(;-?\)|;-?D|\(-?;)', ' EMO_POS ', tweet)
+    # tweet = re.sub(r'(;-?\)|;-?D|\(-?;)', ' EMO_POS ', tweet)
     # Sad -- :-(, : (, :(, ):, )-:
-    tweet = re.sub(r'(:\s?\(|:-\(|\)\s?:|\)-:)', ' EMO_NEG ', tweet)
+    # tweet = re.sub(r'(:\s?\(|:-\(|\)\s?:|\)-:)', ' EMO_NEG ', tweet)
     # Cry -- :,(, :'(, :"(
-    tweet = re.sub(r'(:,\(|:\'\(|:"\()', ' EMO_NEG ', tweet)
-    return tweet
+    # tweet = re.sub(r'(:,\(|:\'\(|:"\()', ' EMO_NEG ', tweet)
+    # return tweet
 
 
 def preprocess_tweet(tweet):
